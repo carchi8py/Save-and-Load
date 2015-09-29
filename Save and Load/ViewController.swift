@@ -15,11 +15,9 @@ func documentsDirectory() -> String {
 }
 
 // File in Documents Directory
-
 func fileInDocumentsDirectory(filename: String) -> String {
     return documentsDirectory().stringByAppendingPathComponent(filename)
 }
-
 
 class ViewController: UIViewController {
     
@@ -32,6 +30,20 @@ class ViewController: UIViewController {
         
         let imagePath = fileInDocumentsDirectory("Photo.jpg")
         println("PhotoPath:\(imagePath)")
+        
+        // Load image from Resouce Bundle (read only)
+        var image = UIImage(named: "IMG_0344_10.jpg")
+        if image != nil {
+            // Save it to our documents folder
+            println(image)
+            saveImage(image!, path: imagePath)
+        }
+    }
+    
+    func saveImage(image: UIImage, path: String) -> Bool {
+        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)
+        let result = jpgImageData.writeToFile(path, atomically: true)
+        return result
     }
 
     override func didReceiveMemoryWarning() {

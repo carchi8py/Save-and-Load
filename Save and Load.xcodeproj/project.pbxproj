@@ -13,6 +13,7 @@
 		279822751BBA4293009CFE09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279822741BBA4293009CFE09 /* Images.xcassets */; };
 		279822781BBA4293009CFE09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279822761BBA4293009CFE09 /* LaunchScreen.xib */; };
 		279822841BBA4293009CFE09 /* Save_and_LoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279822831BBA4293009CFE09 /* Save_and_LoadTests.swift */; };
+		2798228E1BBA47FD009CFE09 /* IMG_0344_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2798228D1BBA47FD009CFE09 /* IMG_0344_10.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2798227D1BBA4293009CFE09 /* Save and LoadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Save and LoadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		279822821BBA4293009CFE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279822831BBA4293009CFE09 /* Save_and_LoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Save_and_LoadTests.swift; sourceTree = "<group>"; };
+		2798228D1BBA47FD009CFE09 /* IMG_0344_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0344_10.jpg; path = ../IMG_0344_10.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				2798226F1BBA4293009CFE09 /* ViewController.swift */,
 				279822711BBA4293009CFE09 /* Main.storyboard */,
 				279822741BBA4293009CFE09 /* Images.xcassets */,
+				2798228D1BBA47FD009CFE09 /* IMG_0344_10.jpg */,
 				279822761BBA4293009CFE09 /* LaunchScreen.xib */,
 				2798226B1BBA4293009CFE09 /* Supporting Files */,
 			);
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279822731BBA4293009CFE09 /* Main.storyboard in Resources */,
+				2798228E1BBA47FD009CFE09 /* IMG_0344_10.jpg in Resources */,
 				279822781BBA4293009CFE09 /* LaunchScreen.xib in Resources */,
 				279822751BBA4293009CFE09 /* Images.xcassets in Resources */,
 			);
