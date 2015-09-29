@@ -8,8 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+//Documents Directory
+func documentsDirectory() -> String {
+    let documentsFolderPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
+    return documentsFolderPath
+}
 
+// File in Documents Directory
+
+class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
