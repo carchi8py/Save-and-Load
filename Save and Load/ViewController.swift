@@ -16,11 +16,22 @@ func documentsDirectory() -> String {
 
 // File in Documents Directory
 
+func fileInDocumentsDirectory(filename: String) -> String {
+    return documentsDirectory().stringByAppendingPathComponent(filename)
+}
+
+
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let documents = documentsDirectory()
+        println("Documents: \(documents)")
+        
+        let imagePath = fileInDocumentsDirectory("Photo.jpg")
+        println("PhotoPath:\(imagePath)")
     }
 
     override func didReceiveMemoryWarning() {
