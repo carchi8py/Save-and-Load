@@ -36,7 +36,8 @@ class ViewController: UIViewController {
         if image != nil {
             // Save it to our documents folder
             println(image)
-            saveImage(image!, path: imagePath)
+            let result = saveImage(image!, path: imagePath)
+            println("saveImage: \(result)")
         }
     }
     
