@@ -21,6 +21,7 @@ func fileInDocumentsDirectory(filename: String) -> String {
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,7 +39,36 @@ class ViewController: UIViewController {
             println(image)
             let result = saveImage(image!, path: imagePath)
             println("saveImage: \(result)")
+            
+            var loadedImage = loadImageFromPath(imagePath)
+            if loadedImage != nil {
+                println("Image Loaded: \(loadedImage!)")
+            }
+            imageView.image = loadedImage
         }
+        
+        //Text loading and Saving
+    }
+    
+    //Save text
+    func saveText(text: String, path: String) -> Bool {
+        var error: NSError? = nil
+        
+        let status = text.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: &error)
+        if !status {
+            println("Error saving file at path: \(path) with error: \(error?.localizedDescription)")
+        }
+        return status
+    }
+    
+    //load Text
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        let image = UIImage(contentsOfFile: path)
+        if image == nil {
+            println("Missing Image at path: \(path)")
+        }
+        return image
     }
     
     func saveImage(image: UIImage, path: String) -> Bool {
