@@ -47,6 +47,8 @@ class ViewController: UIViewController {
             imageView.image = loadedImage
         }
         
+        saveText("Save Me!", path: fileInDocumentsDirectory("help.txt"))
+        
         //Text loading and Saving
     }
     
