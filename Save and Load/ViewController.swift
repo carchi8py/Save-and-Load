@@ -46,10 +46,17 @@ class ViewController: UIViewController {
             }
             imageView.image = loadedImage
         }
-        
-        saveText("Save Me!", path: fileInDocumentsDirectory("help.txt"))
+        let textPath = fileInDocumentsDirectory("help.txt")
+        let status = saveText("Save Me!", path: textPath)
+        println("Saved text: \(status)")
         
         //Text loading and Saving
+        
+        let loadedText = loadTextFromPath(textPath)
+        if loadedText != nil {
+            println("Loaded Text: \(loadedText)")
+        }
+        
     }
     
     //Save text
@@ -64,6 +71,15 @@ class ViewController: UIViewController {
     }
     
     //load Text
+    func loadTextFromPath(path: String) -> String? {
+        var error: NSError? = nil
+        let text = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: &error)
+        if text == nil {
+            println("Error loading text from path \(path) error: \(error)")
+        }
+        
+        return text
+    }
     
     func loadImageFromPath(path: String) -> UIImage? {
         let image = UIImage(contentsOfFile: path)
